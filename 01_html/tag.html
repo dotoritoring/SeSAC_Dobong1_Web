@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">    <!--한글 문서-->
+<head>
+    <!--meta 태그: 브라우저 정보-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+    <h1>안녕하세요</h1>
+    <h2>안녕하세요</h2>
+    <h3>안녕하세요</h3>
+    <h4>안녕하세요</h4>
+    <h5>안녕하세요</h5>
+    <h6>안녕하세요</h6>
+    -->
+
+    <!-- 주석 단축키 -->
+    <!-- 윈도우(cmd) + ctrl + / -->
+    <p>
+    <h2>오늘의 일기</h2>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    </p>
+
+    <hr />
+    <h2>오늘의 할 일</h2>
+    <ul type="none"> <!-- ul의 타입으로는 square, circle, none, disc(default)-->
+        <li>html 복습하기</li>
+        <li>운동하기</li>
+        <li>점심밥 맛있게 먹기</li>
+    </ul>
+
+    <h4>카페라떼 만드는 방법</h4>
+    <ol type="1" reversed start="2">  <!-- ol의 타입으로는 1,a, A, i, I--> <!--start: 시작하는 번호-->
+        <li><b>우유</b>를 <strong>컵</strong>에 넣는다</li>
+        <li><i>얼음</i>을 <em>가득</em> 넣는다</li>
+        <li><del>에스프레소 샷</del>을 넣어주면</li>
+        <li><u>완성!</u></li>
+    </ol>
+
+    <hr />
+
+    <h4>리스트 안에 리스트 넣기</h4>
+    <h5>내가 좋아하는 음식</h5>
+    <ul>
+        <li>양식</li>
+            <ol type="a">
+                <li>피자</li>
+                <li>파스타</li>
+            </ol>
+        <li>한식</li>
+            <ol>
+                <li>비빔밥</li>
+                <li>삼겹살</li>
+            </ol>
+        <li>일식</li>
+            <ol>
+                <li>라멘</li>
+                <li>초밥</li>
+                    <ul>새우초밥</ul>
+                    <ul>연어초밥</ul>
+                    <ul>계란초밥</ul>
+            </ol>
+    </ul>
+
+    <br />
+    <details>
+        <summary>제목</summary>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita beatae, omnis ducimus in quam, nesciunt esse ad distinctio assumenda placeat est sapiente dolorum itaque quis voluptates. Molestias quidem obcaecati illum?
+        <ul>
+            <li>어떤 태그든</li>
+            <li>숨겨짐</li>
+        </ul>
+    </details>
+
+    <h4>a태그와 img 태그 사용하기</h4>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOByQi_wqBIRiSI8ta4O05kp-awGDIlYVhHQ&usqp=CAU" alt="공룡 사진" width="300">
+    <br />
+    <!--절대경로: 가장 상단 경로 기준-->
+    <img src="/01_html/img/santa.jpg" alt="santa" width="200">
+    <br />
+    <!--상대경로: 현재 나의 위치(./) 기준--> <!--추천-->
+    <img src="./img/santa.jpg" alt="santa" width="200">
+    <br />
+    <!--target 속성의 default는 _self: 현재 창에서 이동 / _blank: 새로운 창에서 열림-->
+    <a href="https://www.naver.com/" target="_blank">네이버로 이동하기</a>
+    <br />
+    <a href="./html_start.html" target="_self">html_start 이동하기</a>
+    <br />
+    <!--실습: 사진을 눌렀을 때 구글로 이동-->
+    <a href="https://www.google.com/" target="_blank">
+        <img src="./img/dino.jpg" alt="공-룡">
+    </a>
+    <br />
+    
+
+</body>
+</html>
