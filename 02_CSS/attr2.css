@@ -1,0 +1,112 @@
+.d-block{
+    display: block; /*default*/
+    background-color: aquamarine;
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    padding: 15px;
+    margin: 20px;
+}
+
+.d-inline{
+    display: inline; /*default*/
+    background-color: pink;
+    width: 1000px; /*아무리 커도 의미x*/
+    height: 200px;
+    /*
+    padding: 15px;
+    margin: 20px;
+    */
+}
+
+.d-inline-block{
+    display: inline-block; /*span은 기본적으로 inline이므로 inline-block으로 변경해주어야함*/
+    width: 100px;
+    height: 100px;
+    background-color: yellowgreen;
+    border: 1px solid blue;
+    padding: 15px;  /*상쇄되지 않고 합해짐... ?*/
+    margin: 20px;
+}
+
+.total{
+    width: auto;
+    height: 200px;
+    background-color: orange;
+}
+
+.h{
+    display: inline-block;
+    background-color: skyblue;
+    width: 200px;
+    height: 100px;
+}
+
+.c{
+    display: inline-block;
+    background-color: green;
+    width: 200px;
+    height: 100px;
+    margin: 15px;
+}
+
+.j{
+    display: inline-block;
+    background-color: red;
+    width: 200px;
+    height: 100px;
+    margin: 15px;
+}
+
+.parent{
+    width: 400px;
+    /*
+    width를 300px로 바꾸면 min은 400px유지, max는 같이 줄어듦
+    width를 500px로 바꾸면 max은 400px유지, min는 같이 늘어남
+    */
+    height: 200px;
+    background-color: red;
+}
+
+/*min-width, max-width는 부모 넓이에-*/
+.parent > .min{
+    min-width: 400px;
+    height: 100px;
+    background-color: orange;
+}
+
+.parent > .max{
+    max-width: 400px;
+    height: 100px;
+    background-color: rebeccapurple;
+}
+
+.box{
+    background-color: beige;
+    border: 1px solid black;
+}
+
+.box-px{
+    width: 50px;
+    height: 50px;
+}
+
+.box-viewport{
+    width: 50vw; /*뷰포트 가로 길이의 50%*/
+    height: 50vh; /*뷰포트 세로 길이의 50%*/
+}
+
+.box-per{
+    width: 50%;
+    height: 50%; /*없던 있던 동일*/
+}
+/*뷰포트가 퍼센트보다 더 큰 이유는 body에도 padding이 있기 때문*/
+
+.rem{
+    font-size: 2rem; /* body 1rem=16px*/
+}
+
+/*부모의 글꼴 크기*2*/
+.em{
+    font-size: 2em;
+}

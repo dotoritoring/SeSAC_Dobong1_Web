@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자1 - 기본 선택자</title>
+    <style>
+        *{
+            color: gray;
+        }
+        /*태그 선택자*/
+        li{
+            background-color: aqua;
+            color: blue;
+        }
+
+        h3{
+            background-color: blue;
+            color: skyblue;
+        }
+
+        span{
+            font-size: 50px;
+            font-weight: bold;
+        }
+
+        /*클래스 선택자: 태그 선택자보다 우선순위가 더 높다*/
+        .small{
+            background-color: pink;
+        }
+        .big{
+            background-color: orange;
+        }
+
+        /*아이디 선택자: 아이디 선택자보다 우선순위가 더 높다*/
+        #pp{
+            background-color: skyblue;
+        }
+        /*클래스 선택자*/
+        .pp{
+            background-color: pink;
+        }
+
+        /*선택자 우선순위: tag < class < id
+        if 같은 레벨의 선택자라면, 더 나중에 선언된 스타일이 적용됨
+        */
+        /*아이디는 유일성을 갖는다
+        하나의 html 문서 안에는 각각 유일한 id를 갖어야 한다.
+        */
+    </style>
+</head>
+<body>
+    <ul>
+        <li class="small">쥐</li>
+        <li class="big">소</li>
+        <li class="big">용</li>
+        <li class="small">토끼</li>
+    </ul>
+
+    <h3>올해는 용의 해입니다.</h3>
+    <p id="pp" class="pp">p tag</p>
+    <span>span tag</span>
+</body>
+</html>
