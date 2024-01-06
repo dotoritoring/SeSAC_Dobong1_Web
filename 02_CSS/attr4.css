@@ -1,0 +1,72 @@
+body{
+    height: 2000px;
+}
+.box{
+    display: inline-block;
+    width: 400px;
+    height: 500px;
+    border: 1px solid black;
+}
+
+.background{
+    background-color: palegreen; /*background:palegreen */
+    /* 단축 속성
+    background: color image repeat position/size*/
+    /* background: linear-gradient(45deg,black, white, orange);*/
+    background: linear-gradient(to bottom,black, white, orange); /*to left, to right, to top */
+}
+
+.background-image{
+    background-image: url('./img/small_img.png');
+
+    /*1. background-repeat*/
+    background-repeat: repeat; /*default*/
+    background-repeat: repeat-y;
+    background-repeat: repeat-x;
+    background-repeat: no-repeat;
+
+    /*2. background-position*/
+    /*center, bottom, left, right, top의 키워드로 지정 가능*/
+    /*
+    background-position: center;
+    background-position: center top;
+    */
+    /*background-position: 100px 200px */ /*x축 y축*/
+    
+    /*3. background-size */
+    background-size:50px;
+    background-size:90px 50px; /*가로 세로*/
+    background-size: contain;
+    background-size: cover;
+
+    /*4. background-attachment*/
+    background-attachment: fixed;
+    background-color: pink;
+}
+
+.box2{
+    width: 800px;
+    height: 500px;
+    background-color: skyblue;
+    border: 1px solid black;
+}
+.ex01{
+    background-image: url('https://item.kakaocdn.net/do/d84248170c2c52303db27306a00fb861f604e7b0e6900f9ac53a43965300eb9a');
+    background-repeat: repeat-x;
+    background-position: center;
+}
+
+.ex02{
+    background-image: url('https://item.kakaocdn.net/do/d84248170c2c52303db27306a00fb861f604e7b0e6900f9ac53a43965300eb9a');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: 100px;
+    background-position-y: 30px;
+}
+
+.ex03{
+    background-image: url('https://item.kakaocdn.net/do/d84248170c2c52303db27306a00fb861f604e7b0e6900f9ac53a43965300eb9a');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+

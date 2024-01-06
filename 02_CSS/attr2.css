@@ -110,3 +110,88 @@
 .em{
     font-size: 2em;
 }
+
+.square{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    cursor: pointer; /*커서가 손가락으로 바뀜*/
+    background-color: blue;
+}
+
+.border{
+    background-color: yellow;
+    /*굵기-모양-색깔 순 (테두리만큼 크기가 커짐)*/
+    /* border: 3px solid red;*/
+    /*default: 1px none black*/
+    border-color: blue orange green blue; /*시계방향*/
+    border-style: dotted;
+    border-width: 3px;
+    border-right-width: 5px; /*박스의 각 영역을 따로 스타일링 가능*/
+}
+
+.rounded{
+    background-color: yellowgreen;
+    /*
+    border-radius: 10px;*/ /*50px이면, 완전한 원이 된다.*/
+    border-radius: 5px 10px 20px 40px;
+    border-radius: 5px 40px; /*(1,4)사분면 & (2,3)사분면*/
+}
+
+.rounded2{
+    background-color: gray;
+    border-radius: 5px 40px 20px 10px;
+}
+
+.box-sizing{
+    padding: 20px;
+    border: 15px solid red;
+    background-color: orange;
+}
+
+.content-box{
+    box-sizing: content-box; /*default*/ /*border와 padding을 설정한만큼 크기가 늘어남(원래 크기가 유지되지 않는 점이 아래와 차이점)*/
+}
+
+.border-box{
+    box-sizing: border-box; /*원래 크기인 100px*100px 유지되면서 border와 padding이 늘어남*/
+}
+
+.d-none {
+    display: none; /*속성x, 자리x*/
+    background-color: red;
+}
+.invisible {
+    visibility: hidden; /*속성x, 자리o*/
+    background-color: orangered;
+}
+.opacity-0 {
+    opacity: 0; /*투명해짐*/ /*속성과 자리 둘다 o*/
+    background-color: tomato;
+}
+
+.square2{
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+}
+
+.square2:hover{
+    opacity: 0;
+}
+
+.overflow-hidden{
+    overflow: hidden;
+}
+
+.overflow-auto{
+    overflow: auto;
+}
+
+.overflow-scroll{
+    overflow: scroll;
+}
+
+.overflow-visible{
+    overflow: visible;
+}

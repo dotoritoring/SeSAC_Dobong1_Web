@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container{
+            width: 400px;
+            height: 500px;
+            position: relative;
+        }
+
+        .item1{
+            width: 100px;
+            height: 100px;
+            border-radius:50px;
+            background-color: red;
+            position: relative;
+            left: 45px;
+            top: 90px;
+        }
+        .eye1{
+            width: 35px;
+            height: 35px;
+            border-radius:50px;
+            position: absolute;
+            background-color: white;
+            left: 10px;
+            top: 25px;
+        }
+
+        .eye2{
+            width: 15px;
+            height: 15px;
+            border-radius:50px;
+            position: absolute;
+            background-color: black;
+            left: 15px;
+            top: 40px;
+        }
+        .item2{
+            width: 100px;
+            height: 100px;
+            border-radius:50px;
+            background-color: orange;
+            position: relative;
+            left: 100px;
+            top: 30px;
+        }
+        .item3{
+            width: 100px;
+            height: 100px;
+            border-radius:50px;
+            background-color: yellow;
+            position: relative;
+            left: 140px;
+            bottom: 10px;
+        }
+
+        .item4{
+            width: 100px;
+            height: 100px;
+            border-radius:50px;
+            background-color: yellowgreen;
+            position: relative;
+            left: 180px;
+            bottom: 50px;
+        }
+
+        .item5{
+            width: 100px;
+            height: 100px;
+            border-radius:50px;
+            background-color: skyblue;
+            position: relative;
+            left: 240px;
+            bottom: 80px;
+            z-index: 1;
+        }
+        img{
+            position: relative;
+            bottom: 190px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item1">
+            <div class="eye1"></div>
+            <div class="eye2"></div>
+        </div>
+        <div class="item2"></div>
+        <div class="item3"></div>
+        <div class="item4"></div>
+        <div class="item5"></div>
+    </div>
+    <img src="./img/grass.png" alt="grass">
+</body>
+</html>
