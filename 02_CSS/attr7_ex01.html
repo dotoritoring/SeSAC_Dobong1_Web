@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            position: fixed;
+            background-color: orange;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            animation: ball 5s infinite linear;
+            animation-duration: 6s;
+        }
+
+        p{
+            position: fixed;
+            animation: pp 5s linear;
+            animation-duration: 3s;
+        }
+
+        @keyframes ball {
+            0%{
+                left: 0vw;
+                top:0vw
+            }
+        
+            25%{
+                left: 50vw;
+                top: 0vw;
+            }
+        
+            50%{
+                left: 50vw;
+                top:50vw;
+            }
+        
+            75%{
+                top:50vw;
+                left: 0vw;
+            }
+        
+            100%{
+                left: 0vw;
+                top: 0vw;
+
+            }
+        }
+
+        @keyframes pp {
+            from{
+                right: 0px;
+                width:100px;
+            }
+
+            to{
+                right: 0px;
+                width:100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="ball"></div>
+
+    <p>
+        "As I relax on the sofa and gaze around a room a thought hits me: this is exactly the place I've been looking for all my life. A little hideaway in some sinkhole somewhere. I'd always thought of it as a secret, imaginary place, and can barely believe that it actually exists. I close my eyes and take a breath, and wonder of it all settles over me like a gentle cloud."
+    </p>
+</body>
+</html>

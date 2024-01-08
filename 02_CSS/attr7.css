@@ -1,0 +1,112 @@
+/*
+    transition vs animation
+    -transition
+        - 전환될 스타일 지정 가능
+        - hover 나 onclick 같은 "이벤트"에 의해 발생
+    - animation
+        - 중간 스텝을 지정해 보다 세밀한 스타일 전환 가능
+        - 시작, 반복, 정지 동작 가능
+        - @keyframes로 이루어짐
+*/
+
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: cyan;
+    position: relative;
+    animation-name: my-ani;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;    /*소수점으로도 지정 가능*/
+    animation-timing-function: linear; /*ease: 느리고 빠르고 느리고*/ /*ease-in: 느 -> 빨*/ /*ease-out: 빨 -> 느*/ /*linear: 등속운동*/
+    animation-delay: 2s;
+}
+/*
+animation
+    - animation-name: @keyframes로 만들어준 애니메이션 이름 지정(필수)
+    - animatoin-duration: 한 사이클의 애니메이션이 얼마에 걸쳐 일어날지 지정(단위:s)(필수)
+    - animation-delay: 요소가 로드된 후 언제 애니메이션이 시장될지 지정(단위:s)
+    - animation-iteration-count: 애니메이션 반복횟수(default:1)
+    - animation-timing-function: 어떤 시간간격으로 애니메이션을 진행할지 설정
+        -ease(default), linear, ease-in, ease-in-out, ease-out
+    - animation-direction: 애니메이션이 반복될 때 진행방향 지정
+        -normal, reverse, alternate(0~100까지 갔다가 100~0으로), alternate-reverse(0~100까지 갔다가 다시 0~100으로)
+*/
+
+@keyframes my-ani{
+    0%{
+        left: 0px;
+    }
+
+    25%{
+        left: 200px;
+    }
+
+    50%{
+        left: 400px;
+    }
+
+    75%{
+        left: 200px;
+    }
+
+    100%{
+        left: 0px;
+    }
+}
+.ball1{
+    position: relative;
+    left: 100px;
+    top: 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: black;
+    /* animation-name: bounce1;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+    animation-direction: alternate; 왔다리갔다리 */
+
+    /*위의 내용을 단축키로 작성해보기*/
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    animation: bounce1 1s ease-out 0s infinite alternate;
+}
+
+@keyframes bounce1 {
+    from{
+        top: 300px;
+    } /*0%*/
+
+    to{
+        top: 0px;
+    }    /*100%*/
+}
+
+.ball2{
+    width: 50px;
+    height: 50px;
+    background-color: tomato;
+    position: absolute;
+    border-radius: 50%;
+    /* animation-name: bounce2;
+    animation-duration: 2s;
+    animation-iteration-count: infinite; */
+
+    /*위의 내용을 단축키로 작성해보기*/
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    animation: bounce2 2s infinite;
+}
+
+@keyframes bounce2 {
+    0%, 100%{
+        bottom: 0;
+        width: 55px;
+        animation-timing-function: ease-out;
+    }
+
+    50%{
+        bottom: 300px;
+        background-color: black;
+        animation-timing-function: ease-in;
+    }
+}

@@ -55,3 +55,38 @@
     backface-visibility: visible;
     /* backface-visibility: hidden; */
 }
+
+/*transition*/
+.box{
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    background-color: black;
+}
+
+.box1:hover{
+    background-color: pink;
+    width: 120px;
+    height: 120px;
+    transition-duration: 1s;
+    /* transition-delay: 1s; */
+    /* transition-property: height;*//* height에 대해서만 duration과 delay가 적용됨 */
+    transition-timing-function: ease;
+}
+
+.box2:hover{
+    /*transition 단축 속성*/
+    /*transition: property duration(필수) function delay*/
+    background-color: aqua;
+    transform: translate(100px) scaleX(2);
+
+    /*transition: transform 0.5s linear 2s; */  /*2s뒤에 transform 시작*/
+    transition: 2s;
+}
+
+.box3:hover{
+    opacity: 0;
+    transition: .6s;
+    /* visibility: hidden; */
+    /* visibility: none; */
+}

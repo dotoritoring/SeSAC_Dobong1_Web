@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            display: inline-block;
+        }
+        img{
+            width: 180px;
+            height: 100px;
+            position: absolute;
+            transform: skewY(30deg);
+        
+        }
+        img:hover{
+            transform: rotateY(-30deg);
+            transition: 1s;
+        }
+        .beach1{
+            left: 100px;
+            z-index: 3;
+        }
+        .beach2{
+            left: 200px;
+            z-index: 2;
+        }
+        .beach3{
+            left: 300px;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img class="beach1" src="./img/beach1.jpg" alt="beach1">
+        <img class="beach2" src="./img/beach2.jpg" alt="beach2">
+        <img class="beach3" src="./img/beach3.jpg" alt="beach3">
+    </div>
+</body>
+</html>
